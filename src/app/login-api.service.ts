@@ -7,8 +7,8 @@ import {Observable} from 'rxjs';
 })
 export class LoginApiService {
 
-  private url = 'http://localhost:8080/api/login';
-
+  //private url = 'http://localhost:8080/api/login';
+  private url = 'http://localhost:8080/api/test';
 
   constructor(private http: HttpClient) { }
 
@@ -16,6 +16,10 @@ export class LoginApiService {
 
   getLogin(login: Object): Observable<Object>{
     return this.http.post(`${this.url}`, login);
+  }
+
+  getTest(): Observable<any> {
+    return this.http.get(`${this.url}`);
   }
   
 }

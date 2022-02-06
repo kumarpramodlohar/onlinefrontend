@@ -8,13 +8,17 @@
                 </div>
                 <h3 class="p-4">Welcome To Login</h3>
                 <div class="cryptorio-main-form">
-                    <form *ngFor="let login of logins" action="" class="text-left">
+                    <form class="text-left">
                         <label for="email">Account Name</label>
                         <input type="text" id="email" name="login.username" placeholder="Your email/cellphone">
                         <label for="password">Password</label>
                         <input type="password" id="password" name="login.password" placeholder="Please Input Your Password">
-                                             
-                        <input (click)="getLogin()" type="submit" value="Log In" class="crypt-button-red-full">
+                        
+                        <!-- <input (click)="getTest()" type="submit" value="Log In" class="crypt-button-red-full">                       -->
+                        <!-- <input (click)="getTest()" value="Log In" class="crypt-button-red-full">  -->
+                       
+                        <button (click)="getTest()"  class="crypt-button-red-full"> Test</button>
+                    
                     </form>
                     <p class="float-left"><a href="register.html">Sign Up</a></p>
                     <p class="float-right"><a href="forgot.html">Forgot Password</a></p>

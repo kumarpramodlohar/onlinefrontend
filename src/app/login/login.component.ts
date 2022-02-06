@@ -13,6 +13,7 @@ import { LoginApiService } from '../login-api.service';
 export class LoginComponent implements OnInit {
 
   logins: Login[];
+  
 
   constructor(private router: Router,  private loginApiService: LoginApiService ) { }
 
@@ -22,6 +23,13 @@ export class LoginComponent implements OnInit {
   getLogin(): void {
    // pending work 
   
+  }
+
+  getTest() {
+    this.loginApiService.getTest().subscribe(data => {
+     // this.test = data;
+      console.log(data);
+    });
   }
 
 }
