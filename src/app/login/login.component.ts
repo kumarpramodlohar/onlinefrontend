@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router";
+
+import {Login} from '../dto/login';
+
+import { LoginApiService } from '../login-api.service';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +12,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  logins: Login[];
+
+  constructor(private router: Router,  private loginApiService: LoginApiService ) { }
 
   ngOnInit(): void {
+  }
+
+  getLogin(): void {
+   // pending work 
+  
   }
 
 }
